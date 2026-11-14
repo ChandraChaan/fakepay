@@ -16,7 +16,15 @@ UPI has no sandbox for the intent flow. You can't make a real app return `U16` o
 
 ## Install
 
-Grab the APK from [Releases](../../releases) (or `flutter build apk --release`), install it on a test device or emulator, and open it once. That's all: it is now in the UPI chooser.
+Download an APK from [Releases](https://github.com/ChandraChaan/fakepay/releases/latest), install it on a test device or emulator, and open it once. That's all: it is now in the UPI chooser.
+
+| Your device | APK |
+|---|---|
+| Almost every phone, and emulators on Apple silicon | `arm64-v8a` |
+| Old 32-bit phones | `armeabi-v7a` |
+| Emulators on Intel/AMD computers | `x86_64` |
+
+Or build it yourself with `flutter build apk --release --split-per-abi`. The release APKs are signed with a debug key, which is fine for a test tool but means Android may warn you about the source.
 
 ## Scenarios
 
